@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Monoton&family=Teko&display=swap" rel="stylesheet">
+
+
+    <!--Fontawesome css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+    <!--main css -->
+    <link rel="stylesheet" href="./css/styles.css">    
+    <title>meeting attendance system</title>
+</head>
+<body>
+    <!-- nav -->
+    <ul class="nav">
+    <!-- logo -->
+       <a href="index.html" class="logo"> ink.<span>it</span></a>
+    <!-- end of logo -->
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html">admin</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="./Pages/login.html">login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="./Pages/userPanel.html">user</a>
+        </li>
+    </ul>
+    <!-- end of nav-->
+
+    <section class="container">
+        <div class="card">
+            <div class="header">
+                <img src="./img/admin.png" alt="admin icon" id="admin-icon">
+                <h1>register employee</h1>
+            </div>
+
+            <form class="form-block"  id="form-block">
+                <input type="text" name="first-name" id="first-name" placeholder="enter first name" class="input-box" required>
+                <input type="text" name="last-name" id="last-name" placeholder="enter last name" class="input-box" required>
+                <input type="tel" name="phone-num" id="phoneNumber" minlength="11" maxlength="11" required class="input-box" placeholder="enter phone number">
+                
+                <div class="btn">
+                    <input type="submit" value="create user" id="createUserButton">
+                </div>
+            </form>
+        </div>
+
+        <div class="details">
+            <div class="tab">
+                <button class="tab-text tab-btn">information dashboard...</button>
+            </div>
+
+            <div class="info">
+                <div class="col first-col">
+                    <div class="">
+                        <div class="heading">about ink.it</div>
+                        <div class="display"> 
+                            INK.It is a meeting attendance system. 
+                            It enables the firm keep records of her staff who attend meetings and 
+                            also tracks how many meetings they attend based on the total number of meetings had. <hr>
+                            This can also be used in institutions to keep track of students who attend lectures and how 
+                            many times they attended.
+                        </div>
+                    </div>
+                    
+                    <div class="">
+                        <div class="heading">view & delete details</div>
+                        <div class="display"> 
+                            <ul id="list-an-employee" class="list-employee">mm </ul>
+                            <input type="text" class="" placeholder="enter phone number" minlength="11" maxlength="11" id="employee-ID">
+                            <button type="submit" class="list-btn">view</button>
+                            <button type="submit" class="list-btn">delete</button>
+                            <button type="submit" class="list-btn">close</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col">
+                    <div class="heading">view employees</div>
+                    <div class="display"> 
+                       <div class="display-item">
+                            <li class="display-list">
+                                <span class="first-name">Ezeugo</span>
+                                <span class="last-name">Obieze</span>
+                                <span class="employee-number"> 07060858438</span>
+                                <span class="employee-count"> 1</span>
+                            </li>
+                            <li class="display-list">
+                                <span class="first-name">Ezeugo</span>
+                                <span class="last-name">Obieze</span>
+                                <span class="employee-number"> 07060858438</span>
+                                <span class="employee-count"> 1</span>
+                            </li>
+                       </div>
+                        <button type="submit" class="list-btn">view</button>
+                        <button type="submit" class="list-btn">close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>

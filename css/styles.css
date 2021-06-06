@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: whitesmoke;
+}
+a{
+    text-decoration: none;
+}
+.nav{
+    display: inline-flex;
+    padding: .6rem 1rem;
+    background-color: #586f50;
+    width: 100%;
+    border-bottom: 8px solid gray;
+}
+.nav .logo{
+    font-family: 'Monoton', cursive;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-right: 1.5rem;
+    color: white;
+}
+li{
+    list-style: none;
+}
+.header{
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0;
+    margin-top: 7px;
+    color: #fff;
+}
+
+
+.container{
+    display: flex;
+    margin-top: 3rem;
+    width: 100%;
+    justify-content: center;
+    gap: 4rem;
+}
+/* left form */
+.card{
+    font-family: 'Mate SC', serif;
+    width: 320px;
+    height: 450px;
+    padding: 0 1rem;
+    background-color: #586f50;
+}
+#admin-icon{
+    width: 6.5rem;
+    margin-top: .5rem;
+}
+#form-block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.input-box{
+    padding: 1rem;
+    border-radius: 7px;
+    margin: 10px 0;
+    font-family: 'Mate SC', serif;
+    font-size: 1.2rem;
+    border: none;
+    text-transform: capitalize;
+}
+#createUserButton{
+    padding: .8rem;
+    margin-top: .7rem;
+    border-radius: 7px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #586f50;
+    width: 100%;
+    border: 2px solid #586f50;
+    font-family: 'Mate SC', serif;
+}
+#createUserButton:hover, .list-btn:hover{
+    background-color: #586f50;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* right display */
+.details{
+    font-family: 'Mate SC', serif;
+    flex-basis: 50rem;
+}
+.tab{
+    background-color: #586f50;
+    padding: 1rem 2rem;
+}
+.tab-text{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+}
+.tab-btn{
+    font-family: 'Mate SC', serif;
+    background-color: #586f50;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.info{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: .3rem;
+}
+.first-col{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+.col{
+    flex-basis: 50rem;  
+}
+.heading{
+    background-color: #586f50;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    padding: .5rem .5rem; 
+}
+.display{
+    text-align: justify;
+    margin-top: .2rem; 
+    padding: .5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 
+                0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        
+}
+.display-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Teko', sans-serif;
+    padding: 0 .3rem;
+    margin-bottom: .5rem;
+}
+.display-item{
+    max-height: 46vh;
+}
+.employee-number{
+    background-color: green;
+    color: #fff;
+    padding:  0 .4rem;
+    border-radius: 10px;
+}
+.employee-count{
+    background-color: green;
+    color: #fff;
+    padding: 0 .4rem;
+    border-radius: 40%;
+}
+.list-btn{
+    padding: .3rem 1rem;
+    border-radius: 7px;
+    border-color: #586f50;
+    margin-right: 1rem;
+    font-family: 'Mate SC', serif;
+    font-weight: 800;
+}
+.list-employee{
+    padding: .2rem;
+}
+#employee-ID{
+    width: 100%;
+    padding: .3rem 1rem;
+    border-radius: 7px;
+    margin: .5rem 0;
+    font-family: 'Mate SC', serif;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
