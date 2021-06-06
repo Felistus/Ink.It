@@ -104,13 +104,6 @@ li{
     color: #fff;
     text-transform: uppercase;
 }
-.tab-btn{
-    font-family: 'Mate SC', serif;
-    background-color: #586f50;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
 .info{
     display: flex;
     width: 100%;
@@ -188,10 +181,17 @@ li{
     text-transform: capitalize;
 }
 
+#about-box, #about-head, .display, .head-flex{
+    display: none;
+}
+.head-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
 
-
-
-
+/* trial */
 
 
 
