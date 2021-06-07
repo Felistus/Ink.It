@@ -72,7 +72,7 @@ li.nav-item .nav-link{
     width: 6.5rem;
     margin-top: .5rem;
 }
-#form-block{
+.form-block{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -86,7 +86,7 @@ li.nav-item .nav-link{
     border: none;
     text-transform: capitalize;
 }
-#createUserButton{
+.user-btn{
     padding: .8rem;
     margin-top: .7rem;
     border-radius: 7px;
@@ -98,7 +98,7 @@ li.nav-item .nav-link{
     border: 2px solid #586f50;
     font-family: 'Mate SC', serif;
 }
-#createUserButton:hover, .list-btn:hover{
+.user-btn:hover, .list-btn:hover{
     background-color: #586f50;
     border: 2px solid #fff;
     color: #fff;
@@ -207,11 +207,50 @@ li.nav-item .nav-link{
     cursor: pointer;
 }
 
-/* trial */
-
-
-
-
+/* LOGIN SECTION */
+.login-box{
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+.box-one{
+    width: 350px;
+    height: 450px;   
+    border: 2px solid #586f50;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+.bg-image{
+    height: 100%;
+    background-color: #586f50; /*fall back color */
+    background-image: url(../img/meeting-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+.bg-text{
+    padding: 1.5rem .5rem;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Mate SC', serif;
+    border: 3px solid #f1f1f1;
+    position: relative;
+    top: -70%;
+    z-index: 2;
+    text-align: center;
+}
+.users{
+    font-size: 8rem;
+    margin-top: .7rem;
+}
 
 
 
