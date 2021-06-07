@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 body{
     height: 100vh;
@@ -252,6 +253,54 @@ li.nav-item .nav-link{
     margin-top: .7rem;
 }
 
+/* START CSS ANIMATION */
+.box-one{
+    animation-name: slideInLeft;
+    animation-duration: 6s;
+}
+@keyframes slideInLeft {
+    from {
+        margin-right: 100%;
+    }
+    to {
+        margin-right: 0;
+    }
+}
+
+.bg-text{
+    animation-name: fadeIn;
+    animation-delay: 2s;
+    animation-duration: 3s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#welcome{
+    animation-name: glowInOut;
+    animation-delay: 6s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes glowInOut {
+    from{
+        color: whitesmoke;
+    }
+    75% {
+        color: gray;
+    }
+    to{
+        color: tomato;
+    }
+}
+
+
+/* END CSS ANIMATION */
 
 
 
