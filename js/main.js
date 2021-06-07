@@ -37,8 +37,16 @@ $(document).ready ( () => {
         $(this).addClass("active")
     });
 
+// USING THE JBOX JQUERY PLUGIN TO CREATE A CUSTOM TOOLTIP
+    let options = {
+        attach: ".tooltip-icon",
+        title: "Help!",
+        content: "Contact Admin for assistance if any issues arise...",
+        
+    }
+    new jBox("Tooltip", options);
 
-
+// END OF THE JBOX JQUERY PLUGIN
 
     
 });

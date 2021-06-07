@@ -5,6 +5,7 @@
 @keyframes slideInLeft {
     from {
         margin-right: 100%;
+        margin-top: 40rem;
         height: 200px;
     }
     75%{
