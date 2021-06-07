@@ -253,57 +253,19 @@ li.nav-item .nav-link{
     margin-top: .7rem;
 }
 
-/* START CSS ANIMATION */
-.box-one{
-    animation-name: slideInLeft;
-    animation-duration: 6s;
+/* tooltip */
+.tooltip{
+    margin-top: .5rem;
+    padding: .2rem 0;
+    text-align: right;
 }
-@keyframes slideInLeft {
-    from {
-        margin-right: 100%;
-    }
-    to {
-        margin-right: 0;
-    }
+.tooltip-icon{
+    font-size: 2rem;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 100%;
 }
-
-.bg-text{
-    animation-name: fadeIn;
-    animation-delay: 2s;
-    animation-duration: 3s;
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-#welcome{
-    animation-name: glowInOut;
-    animation-delay: 6s;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-}
-@keyframes glowInOut {
-    from{
-        color: whitesmoke;
-    }
-    75% {
-        color: gray;
-    }
-    to{
-        color: tomato;
-    }
-}
-
-
-/* END CSS ANIMATION */
-
-
-
+/* end of tooltip */
 
 
 

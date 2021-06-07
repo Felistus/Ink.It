@@ -1,0 +1,45 @@
+/* START CSS ANIMATION */
+.box-one{
+    animation: slideInLeft 6s; /* name, duration, timing-function, iteration-count, direction, delay*/
+}
+@keyframes slideInLeft {
+    from {
+        margin-right: 100%;
+        height: 200px;
+    }
+    75%{
+        height: 300px;
+    }
+    to {
+        margin-right: 0;
+    }
+}
+
+.bg-text{
+    animation: fadeIn 3s 2s; /* name, duration(seconds), timing-function, iteration-count, direction, delay(seconds)*/
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#welcome{
+    animation: glowInOut 1s ease-in-out infinite alternate 6s; /* name, duration, timing-function, iteration-count, direction, delay*/
+}
+@keyframes glowInOut {
+    from{
+        color: whitesmoke;
+    }
+    75% {
+        color: greenyellow;
+    }
+    to{
+        color: tomato;
+    }
+}
+
+/* END CSS ANIMATION */
