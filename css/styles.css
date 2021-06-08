@@ -151,7 +151,6 @@ li.nav-item .nav-link{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Teko', sans-serif;
     padding: 0 .3rem;
     margin-bottom: .5rem;
 }
