@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     overflow: hidden;
+    font-family: 'Mate SC', serif;
 }
 body{
     width: 100%;
@@ -65,7 +66,6 @@ li.nav-item .nav-link{
 }
 /* left form */
 .card{
-    font-family: 'Mate SC', serif;
     width: 320px;
     height: 450px;
     padding: 0 1rem;
@@ -84,10 +84,9 @@ li.nav-item .nav-link{
     padding: 1rem;
     border-radius: 7px;
     margin: 10px 0;
-    font-family: 'Mate SC', serif;
     font-size: 1.2rem;
     border: none;
-    text-transform: capitalize;
+    outline: none;
 }
 .user-btn{
     padding: .8rem;
@@ -99,7 +98,6 @@ li.nav-item .nav-link{
     color: #586f50;
     width: 100%;
     border: 2px solid #586f50;
-    font-family: 'Mate SC', serif;
 }
 .user-btn:hover, .list-btn:hover{
     background-color: #586f50;
@@ -110,7 +108,6 @@ li.nav-item .nav-link{
 
 /* right display */
 .details{
-    font-family: 'Mate SC', serif;
     flex-basis: 50rem;
 }
 .tab{
@@ -130,11 +127,6 @@ li.nav-item .nav-link{
     justify-content: center;
     margin-top: .3rem;
 }
-.first-col{
-    display: flex;
-    flex-direction: column;
-    gap: .3rem;
-}
 .col{
     flex-basis: 50rem;  
 }
@@ -146,7 +138,7 @@ li.nav-item .nav-link{
     color: #fff;
     padding: .5rem .5rem; 
 }
-.display{
+.display, .display-intro, .display-about{
     text-align: justify;
     margin-top: .2rem; 
     padding: .5rem;
@@ -184,7 +176,6 @@ li.nav-item .nav-link{
     border-color: #586f50;
     margin-right: 1rem;
     margin-top: .3rem;
-    font-family: 'Mate SC', serif;
     font-weight: 800;
 }
 .list-employee{
@@ -195,12 +186,11 @@ li.nav-item .nav-link{
     padding: .3rem 1rem;
     border-radius: 7px;
     margin: .5rem 0;
-    font-family: 'Mate SC', serif;
     font-size: 1rem;
     text-transform: capitalize;
 }
 
-#about-box, #about-head, .display, .head-flex{
+.display, .head-flex{
     display: none;
 }
 .head-flex{
@@ -214,29 +204,18 @@ li.nav-item .nav-link{
 .login-box{
     display: flex;
     justify-content: center;
+    gap: 1rem;
     padding: 1rem;
     margin-top: 3rem ;
 }
 .box-one{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     width: 350px;
-    height: 400px;  
 }
-.bg-image{
-    height: 100%;
-    padding: 0;
-}
-.bg-text{
-    padding: 1.5rem .5rem;
-    background-color: #586f50; 
-    color: white;
-    font-size: 1.3rem;
-    font-weight: bold;
-    font-family: 'Mate SC', serif;
-    border: 3px solid #f1f1f1;
-    position: relative;
-    top: -100%;
-    text-align: center;
-    margin-top: -3px;
+#intro{
+    color: #000;
 }
 .users{
     font-size: 8rem;
@@ -257,11 +236,61 @@ li.nav-item .nav-link{
     border: 2px solid #fff;
     border-radius: 100%;
 }
-
 /* end of tooltip */
 
 
+/* USER SECTION */
+.mark-section{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 5rem ;
+}
+.mark-card{
+    width: 320px;
+    padding: 2rem 1rem .5rem 1rem;
+    background-color: #586f50;
+}
+#mark-header{
+    margin-bottom: 1rem;
+}
 
-
-
-
+/* POPUP COMPLAINT FORM */
+.complaint-card{
+    border-radius: 7px;
+}
+.complaint-box{
+    padding: .3rem;
+    border-radius: 7px;
+    margin: 3px 0;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+}
+#complaint{
+    outline: none;
+    padding: .3rem;
+    border-radius: 7px;
+    resize: none;
+}
+#complaint-head{
+    text-align: center;
+    margin-top: -0.5rem;
+}
+.send-btn{
+    padding: .3rem;
+    margin-top: .7rem;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #000;
+    width: 100%;
+    border: none;
+    /* font-family: 'Mate SC', serif; */
+}
+.send-btn:hover{
+    background-color: #000;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+}
