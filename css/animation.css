@@ -1,6 +1,6 @@
 /* START CSS ANIMATION */
 .box-one{
-    animation: slideInLeft 6s; /* name, duration, timing-function, iteration-count, direction, delay*/
+    animation: slideInLeft 2s; /* name, duration, timing-function, iteration-count, direction, delay*/
 }
 @keyframes slideInLeft {
     from {
@@ -13,18 +13,6 @@
     }
     to {
         margin-right: 0;
-    }
-}
-
-.bg-text{
-    animation: fadeIn 3s 2s; /* name, duration(seconds), timing-function, iteration-count, direction, delay(seconds)*/
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }
 

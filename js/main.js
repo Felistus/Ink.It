@@ -1,18 +1,12 @@
 $(document).ready ( () => {
-    $("#about-box, #about-head, #about, .display-emp, #delete-tab, #view-tab").hide();
+    $("#about-box, #about, .display-emp, #delete-tab, #view-tab").hide();
     let target;
 
 // codes to execute on page load
     $(window).on("load", () => {
-        $("#about-head").slideDown(800, () => {
-            $("#about-box").delay(800).fadeIn(300, () => {
-                $("#about").slideDown(1000, () => {
-                    $("#delete-tab").delay(1000).fadeIn(400, () => {
-                        $("#view-tab").delay(800).fadeIn(400)
-                    })
-                })
-            })
-        })        
+        $("#delete-tab, #about").delay(900).fadeIn(400, () => {
+            $("#view-tab, #about-box").delay(1000).slideDown(400)
+        })      
     });
 
 // change the plus icon to minu and vice versa
@@ -28,7 +22,7 @@ $(document).ready ( () => {
                     .removeClass("fa-minus")
                     .addClass("fa-plus");
             target.parent().siblings().hide()
-        }
+        };
     });
 
 // controls the addition of the ".active" to each list item in the nav
@@ -38,16 +32,29 @@ $(document).ready ( () => {
     });
 
 // USING THE JBOX JQUERY PLUGIN TO CREATE A CUSTOM TOOLTIP
+    // tooltip
     let options = {
         attach: ".tooltip-icon",
-        // title: "Help!",
         content: "Help Center",
         pointer: "left",
         theme: "TooltipDark"
         
     }
     new jBox("Tooltip", options);
+    // tooltip end
 
+    // modal
+    new jBox('Modal', {
+        position: {
+            x: 'left',
+            y: 'top'
+          },
+        width: 360,
+        theme: "TooltipDark",
+        attach: ".tooltip-icon",
+        content: '<div class="complaint-card" id=""> <h1 id="complaint-head">send a message</h1> <form class="form-block"  id=""> <input type="text" name="first-name" id="complaint-first-name" placeholder="first name" class="complaint-box" required> <input type="text" name="last-name" id="complaint-last-name" placeholder="last name" class="complaint-box" required> <input type="tel" name="phone-num" class="complaint-box" id="complaint-phoneNumber" minlength="11" maxlength="11" required placeholder="phone number"> <textarea name="user-complaint" id="complaint" cols="30" rows="5"></textarea> <div class="btn"> <input type="submit" value="send" class="send-btn" id="send-btn"> </div> </form> </div>'
+      });
+    // modal end
 // END OF THE JBOX JQUERY PLUGIN
 
     

@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.2/dist/jBox.all.min.css" rel="stylesheet">
+    
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Monoton&family=Teko&display=swap" rel="stylesheet">
+
+    <!--Fontawesome css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+    <!--main css -->
+    <link rel="stylesheet" href="../css/animation.css">
+    <link rel="stylesheet" href="../css/styles.css"> 
     <title>MAS: Mark-Attendance</title>
 </head>
 <body>
@@ -15,14 +28,44 @@
         <li class="nav-item">
             <a class="nav-link " href="../index.html">admin</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="./login.html">login</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link" href="user.html">user</a>
         </li>
     </ul>
-<!-- end of nav-->
+<!-- end of nav--> 
+
+    <section class="mark-section">
+        <div class="mark-card" id="">
+            <div class="header" id="mark-header">
+                <h1 id="">Enter Required Detail to Mark Attendance!</h1>
+            </div>
+
+            <form class="form-block"  id="">
+                <input type="tel" name="phone-num" class="input-box" id="markPhoneNumber" minlength="11" maxlength="11" required placeholder="enter phone number">
+                <div class="btn">
+                    <input type="submit" value="mark attendance" class="user-btn" id="mark-btn">
+                </div>
+
+                <span class="tooltip" id="" >
+                    <i class="fa fa-question-circle tooltip-icon" aria-hidden="true"></i>
+                </span>
+            </form>
+        </div>
+    
+    </section>
+
+
+
+
+
+    <!-- jQuery CDN, jBox, main -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.2/dist/jBox.all.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
     
 </body>
 </html>

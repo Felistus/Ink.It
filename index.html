@@ -29,7 +29,7 @@
             <a class="nav-link" href="./pages/login.html">login</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">user</a>
+            <a class="nav-link" href="./pages/user.html">user</a>
         </li>
     </ul>
     <!-- end of nav-->
@@ -44,7 +44,7 @@
             <form class="form-block"  id="form-block">
                 <input type="text" name="first-name" id="first-name" placeholder="enter first name" class="input-box" required>
                 <input type="text" name="last-name" id="last-name" placeholder="enter last name" class="input-box" required>
-                <input type="tel" name="phone-num" id="phoneNumber" minlength="11" maxlength="11" required class="input-box" placeholder="enter phone number">
+                <input type="tel" name="phone-num" id="userPhoneNumber" minlength="11" maxlength="11" required class="input-box" placeholder="enter phone number">
                 
                 <div class="btn">
                     <input type="submit" value="create user" id="createUserButton" class="user-btn">
@@ -53,31 +53,17 @@
         </div>
 
         <div class="details">
-            <div class="tab">
+            <div class="tab" id="dashboard-tab">
                 <p class="tab-text tab-btn">information dashboard...</p>
             </div>
 
-            <div class="info">
-                <div class="col first-col">
-                    <div class="">
-                        <div class="heading" id="about-head">about ink.it</div>
-                        <div class="display" id="about-box"> 
-                            <p id="about">
-                                <strong>INK.It</strong> is a meeting attendance system. 
-                                It enables the firm keep records of her staff who attend meetings and 
-                                also tracks how many meetings they attended based on the total number of meetings held. <br>
-                                
-                                <strong>This</strong> can also be used in institutions to keep track of students who attend lectures and how 
-                                many times they attended.
-                            </p>
-                        </div>
-                    </div>
-                    
+            <div class="info" id="info">
+                <div class="col">
                     <div class="">
                         <div class="heading head-flex" id="delete-tab"> view & delete details
                             <i class="fa fa-plus icon" aria-hidden="true"></i>
                         </div>
-                        <div class="display display-emp"> 
+                        <div class="display display-emp" id="display-em"> 
                             <ul id="list-an-employee" class="list-employee">mm </ul>
                             <input type="text" class="" placeholder="enter phone number" minlength="11" maxlength="11" id="employee-ID">
                             <button type="submit" class="list-btn">view</button>
@@ -85,7 +71,6 @@
                             <button type="submit" class="list-btn">close</button>
                         </div>
                     </div>
-                    
                 </div>
 
                 <div class="col">
@@ -118,8 +103,10 @@
         
     </section>
 
-    <!-- jQuery Google CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- jQuery CDN, jBox, main -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.2/dist/jBox.all.min.js"></script>
     <script src="./js/main.js"></script>
+</body>
 </body>
 </html>
