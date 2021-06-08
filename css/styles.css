@@ -242,7 +242,9 @@ li.nav-item .nav-link{
     font-size: 8rem;
     margin-top: .7rem;
 }
-
+.btn{
+    margin-top: -0.4rem !important;
+}
 /* tooltip */
 .tooltip{
     margin-top: .5rem;

@@ -40,8 +40,10 @@ $(document).ready ( () => {
 // USING THE JBOX JQUERY PLUGIN TO CREATE A CUSTOM TOOLTIP
     let options = {
         attach: ".tooltip-icon",
-        title: "Help!",
-        content: "Contact Admin for assistance if any issues arise...",
+        // title: "Help!",
+        content: "Help Center",
+        pointer: "left",
+        theme: "TooltipDark"
         
     }
     new jBox("Tooltip", options);
