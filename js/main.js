@@ -18,25 +18,26 @@ $(document).ready( () => {
  
 // ADMIN PANEL
     // POST REQUEST: CREATE NEW EMPLOYEE
-     $("#createUserButton").click((event) => {
-         event.preventDefault();
-         const firstName = ( $("#firstName").val() ).toUpperCase();
-         const lastName = ( $("#lastName").val() ).toUpperCase();
-         const userPhoneNumber = $("#userPhoneNumber").val();                                         
-         const password = Math.random().toString(36).slice(2); // generates random password for each user
-         const userInfo = {
-             firstName,
-             lastName,
-             userPhoneNumber,
-             attendanceCount: count,
-             password,
-         };
-         let userDigits = userPhoneNumber.match(numberCheckReg); //  checks if the user-input for phone-number was properly filled with digits only
-         let userDigitValid;
+    $("#createUserButton").click((event) => {
+        event.preventDefault();
+        const firstName = ( $("#firstName").val() ).toUpperCase();
+        const lastName = ( $("#lastName").val() ).toUpperCase();
+        const userPhoneNumber = $("#userPhoneNumber").val();                                         
+        const password = Math.random().toString(36).slice(2); // generates random password for each user
+        const userInfo = {
+            firstName,
+            lastName,
+            userPhoneNumber,
+            attendanceCount: count,
+            password,
+        };
+        let userDigits = userPhoneNumber.match(numberCheckReg); //  checks if the user-input for phone-number was properly filled with digits only
+        let userDigitValid;
 
-         if ( firstName.match(nameCheckReg) || lastName.match(nameCheckReg) ) {
-            alert("Please fill all fields appropriately");
-         } else{
+        if ( firstName.match(nameCheckReg) || lastName.match(nameCheckReg) ) {
+        alert("Please fill all fields appropriately");
+        } else{
+
             if ( userDigits ) {
                 if ( userDigits.length !== 11 ) {
                     alert("Please enter correct phone number format");
@@ -58,26 +59,33 @@ $(document).ready( () => {
                     }
                     
                 }
-             } else {
-                 alert("Please enter correct phone number format")
-             }
-         }
-        //  if((firstName === "") || (lastName === "") || (userPhoneNumber === "" || userPhoneNumber.length !== 11)){
-        //      alert("Please fill all fields appropriately");
-        //      location.reload();
-        //  } else{
-        //      existingUser = userDetails.map(value => value.userPhoneNumber);       
-        //      if( existingUser.includes(userPhoneNumber) ){
-        //          alert("User already exists");
-        //          location.reload();
-        //      } else{
-        //          userDetails.push(userInfo)
-        //          localStorageSetItem();
-        //          alert("User successfully created");
-        //          location.reload();
-        //      }
-        //  }
-     });
+                } else {
+                    alert("Please enter correct phone number format")
+                }
+        }
+    });
+    // END OF POST REQUEST: CREATE NEW EMPLOYEE
+
+    // GET REQUEST: LIST ALL EMPLOYEES
+    $("#list-employees-button").click((event) => {
+        event.preventDefault(); 
+        $(".all-employee").remove();
+    
+        for(let index = 0; index < userDetails.length; index++){
+            $("#list-all-employees").append(`
+                    <li class="all-employee list-group-item d-flex justify-content-between align-items-center">
+                        ${userDetails[index].firstName} ${userDetails[index].lastName} 
+                    <span class="badge badge-secondary badge-pill"> ${userDetails[index].phoneNumber}</span>
+                    <span class="badge badge-primary"> ${userDetails[index].attendanceCount}</span>
+                    </li>`);
+        }
+        $("#close-employees-list").show().click(()=>{
+            $(".all-employee").remove();
+            $("#close-employees-list").hide()
+        });
+    });
+    // END OF LIST ALL EMPLOYEES GET REQUEST
+});
 // END OF ADMIN PANEL
 
 
