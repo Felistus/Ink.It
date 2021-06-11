@@ -149,7 +149,7 @@ $(document).ready( () => {
     $("#close-emp").click( event => {
         event.preventDefault();
         $(".one-employee").remove();
-        closeBTN;
+        closeBTN.hide();
         $("#employee-ID").empty();
     })
     // END OF WIPE DIV CLEAR OF TEXTS/DETAILS
