@@ -100,6 +100,29 @@ $(document).ready( () => {
     // END OF LIST ALL EMPLOYEES GET REQUEST
 
    
+    // GET REQUEST: LIST AN EMPLOYEE
+    $("#view-emp").click((event)=> {
+        event.preventDefault();
+        let userNumber = $("#employee-ID").val();
+        let i;
+        let userArray = userDetails.length;
+
+        for(i = 0; i < userArray; i++){
+            if(userDetails[i].userPhoneNumber !== userNumber){
+                $(".one-employee").remove();
+                $("#list-an-employee").append(`<li class="one-employee no-employee">User doesn't exists in db</li>`);
+            } else{
+                $(".one-employee").remove();
+                return $("#list-an-employee").append(
+                        `<li class="one-employee display-one-emp"> ${userDetails[i].fullName} 
+                            <span class="password"> ${userDetails[i].password} </span>
+                        </li>`
+                );
+                }
+                closeBTN.show();
+            }        
+    });
+    // END OF LIST AN EMPLOYEE GET REQUEST
 
 
 
