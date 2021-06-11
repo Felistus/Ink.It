@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* overflow: hidden; */
+    overflow: hidden;
     font-family: 'Mate SC', serif;
 }
 body{
@@ -147,22 +147,31 @@ li.nav-item .nav-link{
                 rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
         
 }
+.display-item{
+    max-height: 46vh;
+    overflow-y: auto;
+}
 .display-list{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 .3rem;
-    gap: .5rem;
+    width: 100%;
+    gap: .3rem;
     margin-bottom: .5rem;
 }
-.display-item{
-    max-height: 46vh;
+.fontFam{
+    font-family: 'Teko', sans-serif !important;
+}
+.userName{
+    padding: 0 2rem 0 0;
+    width: 12vw;
 }
 .employee-number{
     background-color: green;
     color: #fff;
-    padding:  0 .4rem;
+    padding: .4rem;
     border-radius: 10px;
+    margin-right: 2rem;
 }
 .employee-count{
     background-color: green;
@@ -171,6 +180,7 @@ li.nav-item .nav-link{
     border-radius: 40%;
 }
 .list-btn{
+    width: 100%;
     padding: .3rem 1rem;
     border-radius: 7px;
     border-color: #586f50;
@@ -190,7 +200,7 @@ li.nav-item .nav-link{
     text-transform: capitalize;
 }
 
-.display, .head-flex{
+#display-em, .head-flex{
     display: none;
 }
 .head-flex{
@@ -198,6 +208,23 @@ li.nav-item .nav-link{
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+}
+.display-one-emp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: .3rem;
+    margin-bottom: .5rem;
+}
+.no-employee{
+    color: red;
+}
+.password{
+    background-color: green;
+    color: #fff;
+    padding: .4rem;
+    border-radius: 10px;
 }
 
 /* LOGIN SECTION */

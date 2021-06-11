@@ -59,44 +59,28 @@
             </div>
 
             <div class="info" id="info">
-
-                <div class="col">
-                    <div class="heading head-flex" id="view-tab"> view employees
-                        <i class="fa fa-plus icon" aria-hidden="true"></i>
+<!-- view all employees -->
+                <div class="col" id="view-tab">
+                    <div class="heading head-flex"> view employees
                     </div>
                                        
-                    <div class="display display-emp"> 
-                       <div class="display-item">
-                            <li class="display-list">
-                                <span class="first-name">Ezeugo</span>
-                                <span class="last-name">Obieze</span>
-                                <span class="employee-number"> 07060858438</span>
-                                <span class="employee-count"> 1</span>
-                            </li>
-                            <li class="display-list">
-                                <span class="first-name">Ezeugo</span>
-                                <span class="last-name">Obieze</span>
-                                <span class="employee-number"> 07060858438</span>
-                                <span class="employee-count"> 1</span>
-                            </li>
-                       </div>
-                       <hr>
-                        <button type="submit" class="list-btn">view</button>
-                        <button type="submit" class="list-btn">close</button>
+                    <div class="display"> 
+                       <div class="display-item" id="all-employees" > </div>
+                        <button type="submit" class="list-btn" id="list-employees">view</button>
                     </div>
                 </div>
-
+<!-- view and delete an employee -->
                 <div class="col">
-                    <div class="">
+                    <div>
                         <div class="heading head-flex" id="delete-tab"> view & delete details
                             <i class="fa fa-plus icon" aria-hidden="true"></i>
                         </div>
-                        <div class="display display-emp" id="display-em"> 
-                            <ul id="list-an-employee" class="list-employee">mm </ul>
+                        <div class="display" id="display-emp"> 
+                            <ul id="list-an-employee" class="list-employee"> </ul>
                             <input type="text" class="" placeholder="enter phone number" minlength="11" maxlength="11" id="employee-ID">
-                            <button type="submit" class="list-btn">view</button>
-                            <button type="submit" class="list-btn">delete</button>
-                            <button type="submit" class="list-btn">close</button>
+                            <button type="submit" class="list-btn" id="view-emp">view</button>
+                            <button type="submit" class="list-btn" id="del-emp">delete</button>
+                            <button type="submit" class="list-btn" id="close-emp">close</button>
                         </div>
                     </div>
                 </div>
