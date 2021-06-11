@@ -7,6 +7,7 @@ $(document).ready( () => {
     let fullName;
     let closeBTN = $("#close-emp").hide();
 
+    
     // EXECUTE ON PAGE LOAD
     $(window).on("load", () => {
         listAllEmployees();
@@ -17,9 +18,7 @@ $(document).ready( () => {
      let localStorageSetItem = () =>{
          return localStorage.setItem("User", JSON.stringify(userDetails));
      }
-    //  let reloadPage = () => {
-    //      return location.reload();
-    //  }
+   
 // CAPITALIZE FIRST LETTER OF EACH WORD GIVEN TWO PARAMETERS
     let toCapitalize = (first, second) =>{
         joinedName = first+ " " +second;
@@ -29,6 +28,7 @@ $(document).ready( () => {
         }
         return fullName.join(" ");
     }
+
 //  CREATE A LIST OF ALL EMPLOYEES AND APPEND
     let listAllEmployees = () => {
         return userDetails.forEach( (element) => {
@@ -42,6 +42,7 @@ $(document).ready( () => {
     };
  // END OF FUNCTION EXPRESSIONS
      
+
 // ADMIN PANEL
     // POST REQUEST: CREATE NEW EMPLOYEE
     $("#createUserButton").click((event) => {
@@ -144,36 +145,13 @@ $(document).ready( () => {
     });
     // END OF DELETE AN EMPLOYEE
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // WIPE DIV CLEAR OF TEXTS/DETAILS
+    document.getElementById("close-emp").addEventListener("click", () => {
+        document.querySelector(".one-employee").remove();
+        document.getElementById("close-emp").style.display = "none"
+        document.getElementById("employee-ID").value = "";
+    })
+    // END OF WIPE DIV CLEAR OF TEXTS/DETAILS
 
 
 
