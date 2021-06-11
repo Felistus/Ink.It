@@ -167,14 +167,14 @@ li.nav-item .nav-link{
     width: 12vw;
 }
 .employee-number{
-    background-color: green;
+    background-color: #586f50;
     color: #fff;
     padding: .4rem;
     border-radius: 10px;
     margin-right: 2rem;
 }
 .employee-count{
-    background-color: green;
+    background-color: #586f50;
     color: #fff;
     padding: 0 .4rem;
     border-radius: 40%;
