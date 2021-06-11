@@ -7,7 +7,7 @@ $(document).ready( () => {
     let fullName;
     let closeBTN = $("#close-emp").hide();
 
-    
+
     // EXECUTE ON PAGE LOAD
     $(window).on("load", () => {
         listAllEmployees();
@@ -102,7 +102,7 @@ $(document).ready( () => {
 
    
     // GET REQUEST: LIST AN EMPLOYEE
-    $("#view-emp").click((event)=> {
+    $("#view-emp").click(event => {
         event.preventDefault();
         let userNumber = $("#employee-ID").val();
         let i;
@@ -146,20 +146,13 @@ $(document).ready( () => {
     // END OF DELETE AN EMPLOYEE
 
     // WIPE DIV CLEAR OF TEXTS/DETAILS
-    document.getElementById("close-emp").addEventListener("click", () => {
-        document.querySelector(".one-employee").remove();
-        document.getElementById("close-emp").style.display = "none"
-        document.getElementById("employee-ID").value = "";
+    $("#close-emp").click( event => {
+        event.preventDefault();
+        $(".one-employee").remove();
+        closeBTN;
+        $("#employee-ID").empty();
     })
     // END OF WIPE DIV CLEAR OF TEXTS/DETAILS
-
-
-
 // END OF ADMIN PANEL
-
-
-
-
-
 
 })
