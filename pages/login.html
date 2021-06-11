@@ -37,60 +37,61 @@
     </ul>
 <!-- end of nav-->
 
-    <section class="login-box">
-        <div class="box-one" id="box-one">
+<section class="login-box">
+    <div class="box-one" id="box-one">
 
-            <div class="">
-                <div class="heading" id="">introduction</div>
-                <div class="display-intro" id=""> 
-                    <p id="intro">
-                        <strong>welcome</strong> to Company XYZ Meeting Attendance System (MAS). 
-                        kindly enter your details on the right-hand form as provided by the admin to login and mark attendance...
-                    </p>
-                </div>
-            </div>      
+        <div>
+            <div class="heading">introduction</div>
+            <div class="display-intro"> 
+                <p id="intro">
+                    <strong>welcome</strong> to Company XYZ Meeting Attendance System (MAS). 
+                    kindly enter your details on the right-hand form as provided by the admin to login and mark attendance...
+                </p>
+            </div>
+        </div>      
 
-            <div class="">
-                <div class="heading" id="about">about ink.it</div>
-                <div class="display-about" id="about-box"> 
-                    <p id="about">
-                        <strong>INK.It</strong> is a meeting attendance system. 
-                        It enables the firm keep records of her staff who attend meetings and 
-                        also tracks how many meetings they attended based on the total number of meetings held. <br>
-                        
-                        <strong>This</strong> can also be used in institutions to keep track of students who attend lectures and how 
-                        many times they attended.
-                    </p>
-                </div>
-            </div>             
+        <div>
+            <div class="heading" id="about">about ink.it</div>
+            <div class="display-about" id="about-box"> 
+                <p id="about">
+                    <strong>INK.It</strong> is a meeting attendance system. 
+                    It enables the firm keep records of her staff who attend meetings and 
+                    also tracks how many meetings they attended based on the total number of meetings held. <br>
+                    
+                    <strong>This</strong> can also be used in institutions to keep track of students who attend lectures and how 
+                    many times they attended.
+                </p>
+            </div>
+        </div>             
 
+    </div>
+
+    <div class="box-two card" id="box-two">
+        <div class="header">
+            <i class="fa fa-users users" aria-hidden="true"></i>
+            <h1 id="welcome">welcome!</h1>
         </div>
 
-        <div class="box-two card" id="box-two">
-            <div class="header">
-                <i class="fa fa-users users" aria-hidden="true"></i>
-                <h1 id="welcome">welcome!</h1>
+        <form class="form-block"  id="">
+            <input type="tel" name="phone-num" class="input-box" id="loginPhoneNumber" minlength="11" maxlength="11" required placeholder="enter phone number">
+            <input type="password" name="user-password" id="user-password" class="input-box alert" required placeholder="enter password to proceed">
+            <div class="btn">
+                <input type="submit" value="login" class="user-btn" id="login-btn">
             </div>
 
-            <form class="form-block"  id="">
-                <input type="tel" name="phone-num" class="input-box alert" id="loginPhoneNumber" minlength="11" maxlength="11" required placeholder="enter phone number">
-                <input type="password" name="user-password" id="user-password" class="input-box alert" required placeholder="enter password to proceed">
-                <div class="btn">
-                    <input type="submit" value="login" class="user-btn" id="login-btn">
-                </div>
+            <span class="tooltip">
+                <i class="fa fa-question-circle tooltip-icon" aria-hidden="true"></i>
+            </span>
+        </form>
+    </div>
 
-                <span class="tooltip">
-                    <i class="fa fa-question-circle tooltip-icon" aria-hidden="true"></i>
-                </span>
-            </form>
-        </div>
-
-       
-    </section>
+   
+</section>
 
 <!-- jQuery CDN, jBox, js-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.2/dist/jBox.all.min.js"></script>
     <script src="../js/animation.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>

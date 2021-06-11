@@ -1,11 +1,11 @@
 $(document).ready ( () => {
-    $("#about-box, #about, .display-emp, #delete-tab, #view-tab").hide();
+    $("#about-box, #about, #display-emp, #delete-tab, #view-tab").hide();
     let target;
 
 // codes to execute on page load
     $(window).on("load", () => {
-        $("#delete-tab, #about").delay(900).fadeIn(400, () => {
-            $("#view-tab, #about-box").delay(1000).slideDown(400)
+        $("#view-tab, #about").delay(900).slideDown(2000, () => {
+            $("#delete-tab, #about-box").delay(1000).fadeIn(400)
         })      
     });
 
