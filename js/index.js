@@ -78,10 +78,12 @@ $(document).ready( () => {
                         
                         if ( existingUser.includes(userDigitValid) ) {
                             alert("User already exists");
+                            location.reload();
                         } else {
                             userDetails.push(userInfo)
                             localStorageSetItem();
                             alert("User successfully created");
+                            location.reload();
                         }
                     }
                     
@@ -158,3 +160,7 @@ $(document).ready( () => {
 // END OF ADMIN PANEL
 
 })
+
+
+
+
