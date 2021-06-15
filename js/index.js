@@ -91,8 +91,12 @@ $(document).ready( () => {
                         } else {
                             userDetails.push(userInfo)
                             localStorageSetItem();
-                            swal("Employee details created successfully", { icon: "warning", closeOnClickOutside: false, })
-                            location.reload();
+                            swal( {
+                                title: "Wooh!",
+                                text: "Employee details created successfully",
+                                icon: "success", 
+                                closeOnClickOutside: false,
+                            }).then( () => location.reload() );
                         }
                     }
                 }
@@ -134,16 +138,6 @@ $(document).ready( () => {
             swal("Good! Employee Details are safe", { icon: "info", closeOnClickOutside: false, });
             }
         });
-
-        
-
-        // for(index = 0; index < userDetails.length; index++) {
-        //     if ( userDetails[index].userPhoneNumber === targetUserMobile ) {
-        //         userDetails.splice(index,1);
-        //         localStorageSetItem();
-        //         // currentRow.remove();
-        //     }   
-        // }
     })
     // END OF DELETE AN EMPLOYEE
 
