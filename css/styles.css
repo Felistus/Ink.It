@@ -292,3 +292,9 @@ li.nav-item .nav-link{
     color: #000;
   }
   /* END OF SWEET ALERT */
+
+  .swal-icon img{
+    width: 100px;
+    height: 80px;
+    margin-bottom: -1rem;
+  }
