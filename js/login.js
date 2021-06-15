@@ -1,5 +1,12 @@
 const userDetails = JSON.parse(localStorage.getItem("User")) || []; //checks if the user array is empty or filled on page load
-
+let swalPop = () => {
+    return swal({
+        title: "Ooops!",
+        text: "incorrect user details supplied",
+        icon: "warning",
+        closeOnClickOutside: false,
+    });
+}
 document.getElementById("login-btn").addEventListener("click", (event) => {
     event.preventDefault();
     const loginNum = document.getElementById("loginPhoneNumber").value;
@@ -11,21 +18,28 @@ document.getElementById("login-btn").addEventListener("click", (event) => {
    if ( (loginNum !== "") && (loginPass !== "")) {
         for (i = 0; i < userArray; i++) {
             if ( userDetails[i].userPhoneNumber !== loginNum ) {
-                feedback = "User Does Not Exist...!";
+                swal("warning", "User does not exist");
             }else {
                 if (  userDetails[i].password !== loginPass) {
-                    feedback = "Wrong phone number or password entered!";
+                    feedback = swalPop();
                 } else {
-                    alert("Login Successful..!")
-                    return window.location.href = "../pages/user.html";
+                    return ( swal({
+                        text: "User Login Successful",
+                        icon: "success",
+                        button: false,
+                        closeOnClickOutside: false
+                    }),
+                    setTimeout( () => {
+                        window.location.href = "../pages/user.html"    //   delays the execution of this code for 2seconds;
+                    }, 1500) );
                 }
             }
         }
    } else {
-       feedback = "input fields cannot be submitted empty! supply login details";
+       return swalPop()
    }
-   return alert(feedback);
 })
+
 
 // END OF LOGIN PANEL
 

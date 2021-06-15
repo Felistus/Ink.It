@@ -1,28 +1,11 @@
 $(document).ready ( () => {
-    $("#about-box, #about, #display-emp, #delete-tab, #view-tab").hide();
-    let target;
+    $("#about-box, #about, #view-tab").hide();
 
 // codes to execute on page load
     $(window).on("load", () => {
         $("#view-tab, #about").delay(900).slideDown(2000, () => {
-            $("#delete-tab, #about-box").delay(1000).fadeIn(400)
+            $("#about-box").delay(1000).fadeIn(400)
         })      
-    });
-
-// change the plus icon to minu and vice versa
-    $(".icon").click( (event) => {
-        target = $( event.target );
-        if ( target.hasClass("fa-plus") ) {
-            target 
-                    .removeClass("fa-plus")
-                    .addClass("fa-minus");
-            target.parent().siblings().show()
-        } else {
-            target
-                    .removeClass("fa-minus")
-                    .addClass("fa-plus");
-            target.parent().siblings().hide()
-        };
     });
 
 // controls the addition of the ".active" to each list item in the nav
@@ -31,7 +14,7 @@ $(document).ready ( () => {
         $(this).addClass("active")
     });
 
-// USING THE JBOX JQUERY PLUGIN TO CREATE A CUSTOM TOOLTIP
+// USING THE jBOX jQUERY PLUGIN TO CREATE A CUSTOM TOOLTIP
     // tooltip
     let options = {
         attach: ".tooltip-icon",
