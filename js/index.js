@@ -114,9 +114,9 @@ $(document).ready( () => {
         targetUserMobile = (currentRow.children("td.userMobile").text()).trim();
         let index;
         swal({
-            title: "Hello Admin!... Are you sure?",
+            title: "Are you sure?",
             text: "Deleted information cannot be retrieved!",
-            icon: "warning",
+            icon: "../../img/warning.png",
             buttons: {
                 cancel: "Cancel",
                 confirm: "Confirm"
@@ -134,9 +134,7 @@ $(document).ready( () => {
                         swal("Employee Details has been successfully deleted", { icon: "success", closeOnClickOutside: false, })
                     }   
                 }
-            } else {
-            swal("Good! Employee Details are safe", { icon: "info", closeOnClickOutside: false, });
-            }
+            } 
         });
     })
     // END OF DELETE AN EMPLOYEE

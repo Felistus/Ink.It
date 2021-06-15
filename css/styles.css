@@ -283,12 +283,16 @@ li.nav-item .nav-link{
   .swal-modal{
       width: 18rem;
   }
- 
   .swal-text {
     padding-left: 2rem;
     display: block;
     font-size: 1rem;
     text-align: center;
     color: #000;
+  }
+  .swal-icon img{
+    width: 100px;
+    height: 80px;
+    margin-bottom: -1rem;
   }
   /* END OF SWEET ALERT */
