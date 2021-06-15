@@ -116,7 +116,7 @@ $(document).ready( () => {
         swal({
             title: "Are you sure?",
             text: "Deleted information cannot be retrieved!",
-            icon: "../../img/warning.png",
+            icon: "../img/warning.png",
             buttons: {
                 cancel: "Cancel",
                 confirm: "Confirm"
