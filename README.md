@@ -56,13 +56,14 @@ User should be able to:
 
 ### What I learned
 - How to integrate and use external jQuery plugins for extended functionalities
+- How to use JavaScript Promise
 - How to use Web Storage API (LocalStorage) to:
   - Store data
   - Retrieve data
   - Update data and 
   - Delete data
 - Learnt to use more of functions as it makes the code reusable
-- Proper CSS sytling and HTML semantics ordering
+- Proper CSS styling and HTML semantics ordering
 - How to use jQuery/Js to create elements dynamically and traverse the DOM
 
 ### Useful resources

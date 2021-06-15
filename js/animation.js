@@ -1,10 +1,10 @@
 $(document).ready ( () => {
-    $("#about-box, #about, #display-emp, #delete-tab, #view-tab").hide();
+    $("#about-box, #about, #view-tab").hide();
 
 // codes to execute on page load
     $(window).on("load", () => {
         $("#view-tab, #about").delay(900).slideDown(2000, () => {
-            $("#delete-tab, #about-box").delay(1000).fadeIn(400)
+            $("#about-box").delay(1000).fadeIn(400)
         })      
     });
 
@@ -14,7 +14,7 @@ $(document).ready ( () => {
         $(this).addClass("active")
     });
 
-// USING THE JBOX JQUERY PLUGIN TO CREATE A CUSTOM TOOLTIP
+// USING THE jBOX jQUERY PLUGIN TO CREATE A CUSTOM TOOLTIP
     // tooltip
     let options = {
         attach: ".tooltip-icon",

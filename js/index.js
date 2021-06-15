@@ -15,7 +15,7 @@ $(document).ready( () => {
 
  // FUNCTION EXPRESSIONS
      // LOCAL STORAGE SET ITEM METHOD
-     let localStorageSetItem = (userDetails) =>{
+     let localStorageSetItem = () =>{
          return localStorage.setItem("User", JSON.stringify(userDetails));
      }
    
@@ -34,15 +34,19 @@ $(document).ready( () => {
         return userDetails.forEach( (element) => {
             $("#employees-table").append(`
                     <tr>
-                        <td> ${element.fullName} </td>
-                        <td class="userMobile"> ${element.userPhoneNumber} </td>
-                        <td> ${element.password} </td>
-                        <td class="centerText"> ${element.attendanceCount} </td>
-                        <td class="centerText"> <i class="fa fa-trash icon" aria-hidden="true"></i> </td>
+                        <td class="pick"> ${element.fullName} </td>
+                        <td class="userMobile pick"> ${element.userPhoneNumber} </td>
+                        <td class="pick"> ${element.password} </td>
+                        <td class="centerText pick"> ${element.attendanceCount} </td>
+                        <td class="centerText pick"> <i class="fa fa-trash icon" aria-hidden="true"></i> </td>
                         
                     </tr`);
             });
     };
+
+    // let swalNotice = () => {
+  
+    // }
  // END OF FUNCTION EXPRESSIONS
      
 
@@ -65,147 +69,83 @@ $(document).ready( () => {
         let userDigitValid;
 
         if ( firstName.match(nameCheckReg) || lastName.match(nameCheckReg) ) {
-        alert("Please fill all fields appropriately");
+            swal("Please fill all fields appropriately", { icon: "warning", closeOnClickOutside: false, });
         } else{
-
             if ( userDigits ) {
                 if ( userDigits.length !== 11 ) {
-                    alert("Please enter correct phone number format");
+                    swal("Please enter correct phone number format",  { icon: "warning", closeOnClickOutside: false, });
                 } else {
                     userDigitValid = userDigits.join(""); // joins the array of numbers picked out and transforms it to a single string of numbers
 
                     if((firstName === "") || (lastName === "")){
-                        alert("Please fill all fields appropriately");
+                        swal("Please fill all fields appropriately", { icon: "warning", closeOnClickOutside: false, });
                     } else{
                         existingUser = userDetails.map( value => value.userPhoneNumber );   
-                        
                         if ( existingUser.includes(userDigitValid) ) {
-                            alert("User already exists");
-                            location.reload();
+                            swal( {
+                                title: "Ooops!",
+                                text: "Employee details exist already",
+                                icon: "warning", 
+                                closeOnClickOutside: false,
+                            }).then( () => location.reload() );
                         } else {
                             userDetails.push(userInfo)
-                            localStorageSetItem(userDetails);
-                            alert("User successfully created");
+                            localStorageSetItem();
+                            swal("Employee details created successfully", { icon: "warning", closeOnClickOutside: false, })
                             location.reload();
                         }
                     }
-                    
                 }
                 } else {
-                    alert("Please enter correct phone number format")
+                    swal("Please enter correct phone number format",  { icon: "warning", closeOnClickOutside: false, });
                 }
         }
     });
     // END OF POST REQUEST: CREATE NEW EMPLOYEE
-
-    // GET REQUEST: LIST ALL EMPLOYEES
-    // $("#list-employees-btn").click(() => {
-    //     $(".display-list").remove();
-    //     listAllEmployees();
-    // });
-    // END OF LIST ALL EMPLOYEES GET REQUEST
-
     
     // DELETE AN EMPLOYEE
     $("#employees-table").on("click", ".icon", function() {
-        currentRow = $(this).closest("tr").children("td.userMobile").text();
-        console.log(currentRow)
+        // swalNotice();
+        let currentRow = $(this).closest("tr");
+        targetUserMobile = (currentRow.children("td.userMobile").text()).trim();
+        let index;
+        swal({
+            title: "Hello Admin!... Are you sure?",
+            text: "Deleted information cannot be retrieved!",
+            icon: "warning",
+            buttons: {
+                cancel: "Cancel",
+                confirm: "Confirm"
+            },
+            dangerMode: true,
+            closeOnClickOutside: false,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                for(index = 0; index < userDetails.length; index++) {
+                    if ( userDetails[index].userPhoneNumber === targetUserMobile ) {
+                        userDetails.splice(index,1);
+                        localStorageSetItem();
+                        currentRow.remove();
+                        swal("Employee Details has been successfully deleted", { icon: "success", closeOnClickOutside: false, })
+                    }   
+                }
+            } else {
+            swal("Good! Employee Details are safe", { icon: "info", closeOnClickOutside: false, });
+            }
+        });
 
-        for(let index = 0; index < userDetails.length; index++) {
-            if ( currentRow === userDetails[index].userPhoneNumber ) console.log(currentRow)
-        }
-    });
-   
+        
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-    // GET REQUEST: LIST AN EMPLOYEE
-    // $("#view-emp").click(event => {
-    //     event.preventDefault();
-    //     let userNumber = $("#employee-ID").val();
-    //     let i;
-    //     let userArray = userDetails.length;
-
-    //     for(i = 0; i < userArray; i++){
-    //         if(userDetails[i].userPhoneNumber !== userNumber){
-    //             $(".one-employee").remove();
-    //             $("#list-an-employee").append(`<li class="one-employee no-employee">User doesn't exists in db</li>`);
-    //             closeBTN.show();
-    //         } else{
-    //             $(".one-employee").remove();
-    //             closeBTN.show();
-    //             return $("#list-an-employee").append(
-    //                     `<li class="one-employee display-one-emp"> ${userDetails[i].fullName} 
-    //                         <span class="password"> ${userDetails[i].password} </span>
-    //                     </li>`
-    //             );
-    //             }
-    //         }        
-    // });
-    // END OF LIST AN EMPLOYEE GET REQUEST
-    
-    // GET REQUEST: DELETE AN EMPLOYEE
-    // $("#del-emp").click(()=> {
-    //     userNumber = $("#employee-ID").val();
-    //     let i;
-    //     let userArray = userDetails.length
-
-    //     for(i = 0; i < userArray; i++){
-    //         if(userDetails[i].userPhoneNumber !== userNumber){
-    //             $(".one-employee").remove();
-    //             $("#list-an-employee").append(`<li class="one-employee no-employee">User doesn't exists in db</li>`);
-    //         } else{
-    //             userDetails.splice(i,1);
-    //             localStorageSetItem();
-    //             $(".one-employee").remove();
-    //             return $("#list-an-employee").append(`<li class="one-employee">User successfully DELETED</li>`);
-    //         }
-    //         closeBTN.show();
-    //     }        
-    // });
+        // for(index = 0; index < userDetails.length; index++) {
+        //     if ( userDetails[index].userPhoneNumber === targetUserMobile ) {
+        //         userDetails.splice(index,1);
+        //         localStorageSetItem();
+        //         // currentRow.remove();
+        //     }   
+        // }
+    })
     // END OF DELETE AN EMPLOYEE
 
-    // WIPE DIV CLEAR OF TEXTS/DETAILS
-    // $("#close-emp").click( event => {
-    //     event.preventDefault();
-    //     $(".one-employee").remove();
-    //     closeBTN.hide();
-    //     $("#employee-ID").empty();
-    // })
-    // END OF WIPE DIV CLEAR OF TEXTS/DETAILS
-// END OF ADMIN PANEL
-
-
+    
 })
-
-
-
-
