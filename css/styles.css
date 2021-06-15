@@ -20,13 +20,20 @@ a{
     width: 100%;
     border-bottom: 8px solid white;
 }
+.logoBox{
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+    margin-left: 1rem;
+    padding: 0.2rem;
+    color: white; 
+    font-weight: 800;
+}
 .nav .logo{
     font-family: 'Monoton', cursive;
     font-size: 2rem;
-    font-weight: 800;
     text-transform: capitalize;
-    margin-right: 3rem;
-    margin-left: 1rem;
+    margin-bottom: -0.5rem;
     color: white;
 }
 li a{
@@ -121,7 +128,7 @@ li.nav-item .nav-link{
     text-transform: uppercase;
 }
 .info{
-    display: flex;
+    /* display: flex; */
     width: 100%;
     gap: 2rem;
     justify-content: center;
@@ -151,15 +158,7 @@ li.nav-item .nav-link{
     max-height: 46vh;
     overflow-y: auto;
 }
-.display-list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: .3rem;
-    margin-bottom: .5rem;
-}
-.fontFam{
+/* .fontFam{
     font-family: 'Teko', sans-serif !important;
 }
 .userName{
@@ -178,7 +177,7 @@ li.nav-item .nav-link{
     color: #fff;
     padding: 0 .4rem;
     border-radius: 40%;
-}
+} */
 .list-btn{
     width: 100%;
     padding: .3rem 1rem;
@@ -206,8 +205,11 @@ li.nav-item .nav-link{
 .head-flex{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;;
     cursor: pointer;
+}
+.head-flex p{
+    margin: 0 auto !important;
 }
 .display-one-emp{
     display: flex;
@@ -321,3 +323,48 @@ li.nav-item .nav-link{
     color: #fff;
     cursor: pointer;
 }
+
+/* table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* tr:nth-child(even) {
+    background-color: #dddddd;
+  } */
+
+  td.centerText{
+      text-align: center;
+  }
+ 
+  /* SWEET ALERT */
+  .swal-modal{
+      width: 20rem;
+  }
+  .swal-title{
+      color: red;
+  }
+  .swal-text {
+    background-color: #FEFAE3;
+    padding: 17px;
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    color: #000;
+  }
+  .swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: #586f50;
+    font-size: 12px;
+    border: 1px solid #586f50;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  }
+  /* END OF SWEET ALERT */

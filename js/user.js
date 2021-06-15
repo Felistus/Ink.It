@@ -4,7 +4,16 @@ const userDetails = JSON.parse(localStorage.getItem("User")) || []; //checks if 
 let localStorageSetItem = () =>{
     return localStorage.setItem("User", JSON.stringify(userDetails)); // LOCAL STORAGE SET ITEM METHOD
 }
+let swalPop = () => {
+    return swal({
+        title: "Error!",
+        text: "incorrect user detail entered",
+        icon: "warning",
+        closeOnClickOutside: false,
+    });
+}
  // END OF FUNCTION EXPRESSIONS
+ 
 document.getElementById("mark-btn").addEventListener("click", event => {
     event.preventDefault();
     let meetingCount;
@@ -26,17 +35,22 @@ document.getElementById("mark-btn").addEventListener("click", event => {
                 };
                 userDetails.splice(i, 1, user)
                 localStorageSetItem();
-                alert(`Attendance Successfully Marked for Meeting day: 
-                ${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`
-                )
-                return window.location.href = "../pages/login.html";
+                return ( swal({
+                            title: "Congratulations!",
+                            text: "Attendance Successfully Marked.",
+                            icon: "success",
+                            button: false
+                }),  
+                setTimeout( () => {
+                    window.location.href = "../pages/login.html"    //   delays the execution of this code for 2seconds;
+                }, 3000) )
+            
             } else{
-                response = ("User doesn't exist ..! See ADMIN for more details");
+                response = swalPop();
             }
         };
                 
     } else {
-        alert("input field cannot be empty...!");
+        return swalPop();
     }
-    return alert(response);
 })
