@@ -5,8 +5,6 @@ $(document).ready( () => {
     let nameCheckReg =  /[^aA-zZ]/g; //regular expression to check if the username contains digits
     let numberCheckReg = /[0-9]/g; //regular expression to check if the user phone number contains digits only or combined and extracts only digits
     let fullName;
-    // let closeBTN = $("#close-emp").hide();
-
 
     // EXECUTE ON PAGE LOAD
     $(window).on("load", () => {
@@ -44,9 +42,6 @@ $(document).ready( () => {
             });
     };
 
-    // let swalNotice = () => {
-  
-    // }
  // END OF FUNCTION EXPRESSIONS
      
 
@@ -109,7 +104,6 @@ $(document).ready( () => {
     
     // DELETE AN EMPLOYEE
     $("#employees-table").on("click", ".icon", function() {
-        // swalNotice();
         let currentRow = $(this).closest("tr");
         targetUserMobile = (currentRow.children("td.userMobile").text()).trim();
         let index;
