@@ -24,14 +24,15 @@ document.getElementById("login-btn").addEventListener("click", (event) => {
                     feedback = swalPop();
                 } else {
                     return ( swal({
-                        text: "User Login Successful",
+                        title: "Login Successful",
+                        text: "redirecting to attendance page",
                         icon: "success",
                         button: false,
                         closeOnClickOutside: false
                     }),
                     setTimeout( () => {
                         window.location.href = "../pages/user.html"    //   delays the execution of this code for 2seconds;
-                    }, 1500) );
+                    }, 2500) );
                 }
             }
         }
