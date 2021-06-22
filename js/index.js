@@ -59,6 +59,7 @@ $(document).ready( () => {
             userPhoneNumber,
             attendanceCount: count,
             password,
+            date: []
         };
         let userDigits = userPhoneNumber.match(numberCheckReg); //  checks if the user-input for phone-number was properly filled with digits only
         let userDigitValid;
