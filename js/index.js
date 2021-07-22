@@ -1,5 +1,5 @@
 $(document).ready( () => {
-    const userDetails = JSON.parse(localStorage.getItem("User")) || []; //checks if the user array is empty or filled on page load
+    const userDetails = JSON.parse(localStorage.getItem("User")) || []; //checks if the user array is empty or populated on page load
     let existingUser;
     let count = 0;
     let nameCheckReg =  /[^aA-zZ]/g; //regular expression to check if the username contains digits
